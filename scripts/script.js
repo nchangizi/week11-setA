@@ -66,3 +66,15 @@ function squareListMaker() {
   ulList.classList.remove("circleList");
 }
 squareListMaker();
+
+function updateImage() {
+  const image = document.querySelector("#shoppingCart");
+  image.setAttribute(
+    "src",
+    "https://cdn-icons-png.flaticon.com/512/263/263142.png"
+  );
+  image.setAttribute("width", 50);
+  image.setAttribute("height",50);
+  image.setAttribute("alt", "shopping cart icon")
+}
+updateImage();
