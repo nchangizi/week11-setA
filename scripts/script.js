@@ -74,7 +74,29 @@ function updateImage() {
     "https://cdn-icons-png.flaticon.com/512/263/263142.png"
   );
   image.setAttribute("width", 50);
-  image.setAttribute("height",50);
-  image.setAttribute("alt", "shopping cart icon")
+  image.setAttribute("height", 50);
+  image.setAttribute("alt", "shopping cart icon");
 }
 updateImage();
+
+function makeListGreen() {
+  // 1.find all the li s -> array-like structure
+  const listItems = document.querySelectorAll(".shopping > li");
+  // 2.loop through the array
+  // for (let i =0 ; i <listItems.length; i++)
+  // {
+  //   let item = listItems[i]
+  // }
+  for (let item of listItems) {
+    // 3. find the textContent of each item of the array
+    let text = item.textContent;
+    //4. use .includes() to check if the text contains green
+
+    if (text.includes("green")) {
+      //5. update the style of that element to green text
+      // item.style.color = "green";
+      item.classList.add("greenText");
+    }
+  }
+}
+makeListGreen();
